@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho: Agro Forte e Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Missão Agrinho</h1>
+            <p class="subtitle">Agro Forte e Futuro Sustentável</p>
+        </header>
 
+        <section class="status-panel">
+            <div class="status-item">
+                <span class="icon">🚜</span>
+                <span class="label">Produtividade:</span>
+                <div class="bar-container">
+                    <div id="bar-produtividade" class="bar" style="width: 50%;"></div>
+                </div>
+                <span id="val-produtividade">50%</span>
+            </div>
+            
+            <div class="status-item">
+                <span class="icon">🌱</span>
+                <span class="label">Sustentabilidade:</span>
+                <div class="bar-container">
+                    <div id="bar-sustentabilidade" class="bar" style="width: 50%;"></div>
+                </div>
+                <span id="val-sustentabilidade">50%</span>
+            </div>
+
+            <div class="status-item flex-row">
+                <div>💰 <span class="label">Caixa:</span> <span id="val-moedas">R$ 1000</span></div>
+                <div>📅 <span class="label">Turno:</span> <span id="val-turno">1/6</span></div>
+            </div>
+        </section>
+
+        <section class="card-event">
+            <h3 id="event-title">Carregando fazenda...</h3>
+            <p id="event-desc">Prepare-se para gerenciar sua propriedade!</p>
+            
+            <div id="options-container" class="options-container">
+                </div>
+        </section>
+
+        <section id="feedback-box" class="feedback-box hidden">
+            <p id="feedback-text"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
