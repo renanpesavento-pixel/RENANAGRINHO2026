@@ -1,1 +1,154 @@
+:root {
+    --green-dark: #1b4d3e;
+    --green-light: #2e7d32;
+    --green-accent: #4caf50;
+    --earth: #795548;
+    --bg-color: #f1f8e9;
+    --text-color: #333;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-top: 8px solid var(--green-dark);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--green-dark);
+    font-size: 2rem;
+}
+
+.subtitle {
+    margin: 5px 0 0 0;
+    color: var(--earth);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Painel de Status */
+.status-panel {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.status-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flex-row {
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    font-weight: bold;
+}
+
+.label {
+    font-weight: 600;
+    width: 110px;
+}
+
+.bar-container {
+    flex-grow: 1;
+    background: #e0e0e0;
+    height: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: var(--green-light);
+    transition: width 0.4s ease;
+}
+
+#bar-produtividade { background-color: var(--earth); }
+#bar-sustentabilidade { background-color: var(--green-accent); }
+
+/* Cartão de Eventos */
+.card-event {
+    background: #fff;
+    border: 2px solid var(--green-dark);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#event-title {
+    margin-top: 0;
+    color: var(--green-dark);
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    background: #ffffff;
+    border: 2px solid var(--green-light);
+    color: var(--green-light);
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+button:hover {
+    background: var(--green-light);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Caixa de Feedback */
+.feedback-box {
+    background: #e8f5e9;
+    border-left: 5px solid var(--green-accent);
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.hidden { display: none; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
